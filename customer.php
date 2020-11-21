@@ -9,7 +9,7 @@
 <div id="main">
 	<h1 class="first"> Customer List </h1>
 	<?php
-	  $conn = mysqli_connect("localhost","root","","transfer") or die("connection failed");
+	  $conn = mysqli_connect("localhost","id15455844_root","Acubesmoney0001@","id15455844_transfer") or die("connection failed");
 
 	  $sql = "SELECT * FROM customer ; ";
 	  $result = mysqli_query($conn, $sql) or die("query unsucessfull");

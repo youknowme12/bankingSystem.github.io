@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-$conn = mysqli_connect("localhost","root","","transfer") or die("connection failed");
+$conn = mysqli_connect("localhost","id15455844_root","Acubesmoney0001@","id15455844_transfer") or die("connection failed");
 
 $sid = (isset($_GET['cid']) ? $_GET['cid'] : '');
 
@@ -29,7 +29,12 @@ if(isset($_POST['submits']))
     echo ' alert("Insufficient Balance")'; 
     echo '</script>';
   }
-  else {
+  else if ($amount <= 0 ) {
+    echo '<script type="text/javascript">';
+    echo ' alert("Invalid Input")'; 
+    echo '</script>';
+  }
+  else if ($amount > 0 ) {
 
   	$newbalance = $sdata['balance'] - $amount;
   	$sql = "UPDATE customer SET balance ='$newbalance' WHERE cid = '$sender'";

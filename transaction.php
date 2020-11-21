@@ -55,7 +55,7 @@
 	        <tbody>
         		<?php
         			
-            		$conn = mysqli_connect("localhost","root","","transfer") or die("connection failed");
+            		$conn = mysqli_connect("localhost","id15455844_root","Acubesmoney0001@","id15455844_transfer") or die("connection failed");
 
             		$sql=mysqli_query($conn,"SELECT * from transaction");
             		while($result=mysqli_fetch_assoc($sql))
